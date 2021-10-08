@@ -1,9 +1,9 @@
 {
-  "name": "@imooc-cli-dev-myf/publish",
+  "name": "@boulderai-cli/publish",
   "version": "1.0.0",
   "description": "> TODO: description",
   "author": "mayefeng <mayefeng@163.com>",
-  "homepage": "https://github.com/mayefeng/imooc-cli-dev-myf#readme",
+  "homepage": "https://github.com/mayefeng/boulderai-cli#readme",
   "license": "ISC",
   "main": "lib/index.js",
   "directories": {
@@ -18,18 +18,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mayefeng/imooc-cli-dev-myf.git"
+    "url": "git+https://github.com/mayefeng/boulderai-cli.git"
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
-    "@imooc-cli-dev-myf/command": "file:../../models/command",
-    "@imooc-cli-dev-myf/log": "file:../../utils/log",
-    "@imooc-cli-dev-myf/git": "file:../../models/git",
+    "@boulderai-cli/command": "file:../../models/command",
+    "@boulderai-cli/log": "file:../../utils/log",
+    "@boulderai-cli/git": "file:../../models/git",
     "fs-extra": "^10.0.0"
   },
   "bugs": {
-    "url": "https://github.com/mayefeng/imooc-cli-dev-myf/issues"
+    "url": "https://github.com/mayefeng/boulderai-cli/issues"
   }
 }

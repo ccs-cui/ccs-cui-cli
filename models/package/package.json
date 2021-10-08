@@ -1,9 +1,9 @@
 {
-  "name": "@imooc-cli-dev/package",
+  "name": "@boulderai-cli/package",
   "version": "1.0.0",
-  "description": "imooc-cli-dev-myf npm modules",
+  "description": "boulderai-cli npm modules",
   "author": "mayefeng <mayefeng@163.com>",
-  "homepage": "https://github.com/mayefeng/imooc-cli-dev-myf#readme",
+  "homepage": "https://github.com/mayefeng/boulderai-cli#readme",
   "license": "ISC",
   "main": "lib/index.js",
   "directories": {
@@ -18,21 +18,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mayefeng/imooc-cli-dev-myf.git"
+    "url": "git+https://github.com/mayefeng/boulderai-cli.git"
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
-    "@imooc-cli-dev-myf/format-path": "file:../../utils/format-path",
-    "@imooc-cli-dev-myf/get-npm-info": "file:../../utils/get-npm-info",
-    "@imooc-cli-dev-myf/utils": "file:../../utils/utils",
+    "@boulderai-cli/format-path": "file:../../utils/format-path",
+    "@boulderai-cli/get-npm-info": "file:../../utils/get-npm-info",
+    "@boulderai-cli/utils": "file:../../utils/utils",
     "fs-extra": "^10.0.0",
     "npminstall": "^4.11.0",
     "path-exists": "^4.0.0",
     "pkg-dir": "^5.0.0"
   },
   "bugs": {
-    "url": "https://github.com/mayefeng/imooc-cli-dev-myf/issues"
+    "url": "https://github.com/mayefeng/boulderai-cli/issues"
   }
 }

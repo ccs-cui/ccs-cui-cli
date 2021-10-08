@@ -3,8 +3,8 @@
 const io = require('socket.io-client')
 const inquirer = require('inquirer')
 const get = require('lodash/get')
-const log = require('@imooc-cli-dev-myf/log')
-const request = require('@imooc-cli-dev-myf/request')
+const log = require('@boulderai-cli/log')
+const request = require('@boulderai-cli/request')
 
 const WS_SERVER = 'http://127.0.0.1:7001'
 // const WS_SERVER = 'http://book.youbaobao.xyz:7001'

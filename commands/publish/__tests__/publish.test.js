@@ -2,6 +2,6 @@
 
 const publish = require('..');
 
-describe('@imooc-cli-dev-myf/publish', () => {
+describe('@boulderai-cli/publish', () => {
     it('needs tests');
 });

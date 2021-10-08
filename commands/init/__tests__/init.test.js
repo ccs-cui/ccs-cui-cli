@@ -2,6 +2,6 @@
 
 const init = require('..');
 
-describe('@imooc-cli-dev-myf/init', () => {
+describe('@boulderai-cli/init', () => {
     it('needs tests');
 });

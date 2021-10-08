@@ -3,15 +3,15 @@
 module.exports = exec;
 
 const path = require('path')
-const Package = require('@imooc-cli-dev-myf/package')
-const log = require('@imooc-cli-dev-myf/log');
-const { exec: spawn } = require('@imooc-cli-dev-myf/utils');
+const Package = require('@boulderai-cli/package')
+const log = require('@boulderai-cli/log');
+const { exec: spawn } = require('@boulderai-cli/utils');
 const { chdir } = require('process');
 
 const SETTINGS = {
-    // init: '@imooc-cli-dev-myf/init'
-    init: '@imooc-cli/init',
-    publish: '@imooc-cli/publish',
+    // init: '@boulderai-cli/init'
+    init: '@boulderai-cli/init',
+    publish: '@boulderai-cli/publish',
 }
 
 const CACHE_DIR = 'dependencies/'

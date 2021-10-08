@@ -2,6 +2,6 @@
 
 const package = require('..');
 
-describe('@imooc-cli-dev/package', () => {
+describe('@boulderai-cli/package', () => {
     it('needs tests');
 });

@@ -2,7 +2,7 @@
 
 const semver = require('semver')
 const colors = require('colors/safe')
-const log = require('@imooc-cli-dev-myf/log');
+const log = require('@boulderai-cli/log');
 
 const LOWEST_NODE_VERSION = '12.0.0';
 
@@ -51,7 +51,7 @@ class Command {
         const lowestNodeVersion = LOWEST_NODE_VERSION
     
         if (!semver.gte(currentVersion, lowestNodeVersion)) {
-            throw new Error(colors.red(`imooc-cli 需要安装 v${lowestNodeVersion}以上版本的 Node.js` ))
+            throw new Error(colors.red(`boulderai-cli 需要安装 v${lowestNodeVersion}以上版本的 Node.js` ))
         }
     }
 

@@ -1,4 +1,4 @@
-const request = require('@imooc-cli-dev-myf/request')
+const request = require('@boulderai-cli/request')
 
 module.exports = function() {
     return request({

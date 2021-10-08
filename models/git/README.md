@@ -1,11 +1,11 @@
-# `@imooc-cli-dev-myf/git`
+# `@boulderai-cli/git`
 
 > TODO: description
 
 ## Usage
 
 ```
-const git = require('@imooc-cli-dev-myf/git');
+const git = require('@boulderai-cli/git');
 
 // TODO: DEMONSTRATE API
 ```

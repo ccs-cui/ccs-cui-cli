@@ -1,12 +1,12 @@
 {
-  "name": "@imooc-cli-dev-myf/log",
+  "name": "@boulderai-cli/log",
   "version": "1.0.4",
-  "description": "imooc-cli-dev log",
+  "description": "boulderai-cli log",
   "keywords": [
     "log"
   ],
   "author": "mayefeng <mayefeng@163.com>",
-  "homepage": "https://github.com/mayefeng/imooc-cli-dev-myf#readme",
+  "homepage": "https://github.com/mayefeng/boulderai-cli#readme",
   "license": "ISC",
   "main": "lib/index.js",
   "directories": {
@@ -21,13 +21,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mayefeng/imooc-cli-dev-myf.git"
+    "url": "git+https://github.com/mayefeng/boulderai-cli.git"
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "bugs": {
-    "url": "https://github.com/mayefeng/imooc-cli-dev-myf/issues"
+    "url": "https://github.com/mayefeng/boulderai-cli/issues"
   },
   "dependencies": {
     "npmlog": "^5.0.0"

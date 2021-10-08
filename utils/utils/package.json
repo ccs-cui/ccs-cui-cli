@@ -1,7 +1,7 @@
 {
-  "name": "@imooc-cli-dev-myf/utils",
+  "name": "@boulderai-cli/utils",
   "version": "1.0.4",
-  "description": "imooc-cli-dev-myf utils",
+  "description": "boulderai-cli utils",
   "author": "mayefeng <mayefeng@boulderaitech.com>",
   "homepage": "",
   "license": "ISC",

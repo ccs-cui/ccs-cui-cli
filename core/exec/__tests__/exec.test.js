@@ -2,6 +2,6 @@
 
 const exec = require('..');
 
-describe('@imooc-cli-dev-myf/exec', () => {
+describe('@boulderai-cli/exec', () => {
     it('needs tests');
 });

@@ -1,9 +1,9 @@
 {
-  "name": "@imooc-cli-dev-myf/cloudbuild",
+  "name": "@boulderai-cli/cloudbuild",
   "version": "1.0.0",
   "description": "> TODO: description",
   "author": "mayefeng <mayefeng@163.com>",
-  "homepage": "https://github.com/mayefeng/imooc-cli-dev-myf#readme",
+  "homepage": "https://github.com/mayefeng/boulderai-cli#readme",
   "license": "ISC",
   "main": "lib/index.js",
   "directories": {
@@ -15,17 +15,17 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mayefeng/imooc-cli-dev-myf.git"
+    "url": "git+https://github.com/mayefeng/boulderai-cli.git"
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "bugs": {
-    "url": "https://github.com/mayefeng/imooc-cli-dev-myf/issues"
+    "url": "https://github.com/mayefeng/boulderai-cli/issues"
   },
   "dependencies": {
-    "@imooc-cli-dev-myf/log": "file:../../utils/log",
-    "@imooc-cli-dev-myf/request": "file:../../utils/request",
+    "@boulderai-cli/log": "file:../../utils/log",
+    "@boulderai-cli/request": "file:../../utils/request",
     "inquirer": "^8.1.2",
     "lodash": "^4.17.21",
     "socket.io-client": "^2.0.0"

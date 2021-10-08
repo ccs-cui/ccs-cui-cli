@@ -1,11 +1,11 @@
-# `@imooc-cli-dev-myf/log`
+# `@boulderai-cli/log`
 
 > TODO: description
 
 ## Usage
 
 ```
-const log = require('@imooc-cli-dev-myf/log');
+const log = require('@boulderai-cli/log');
 
 // TODO: DEMONSTRATE API
 ```

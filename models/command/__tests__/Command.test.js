@@ -2,6 +2,6 @@
 
 const command = require('..');
 
-describe('@imooc-cli-dev-myf/Command', () => {
+describe('@boulderai-cli/Command', () => {
     it('needs tests');
 });

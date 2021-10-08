@@ -1,11 +1,11 @@
-# `@imooc-cli-dev-myf/exec`
+# `@boulderai-cli/exec`
 
 > TODO: description
 
 ## Usage
 
 ```
-const exec = require('@imooc-cli-dev-myf/exec');
+const exec = require('@boulderai-cli/exec');
 
 // TODO: DEMONSTRATE API
 ```

@@ -8,13 +8,13 @@ const userHome = require('user-home')
 const inquirer = require('inquirer')
 const terminalLink = require('terminal-link')
 const semver = require('semver')
-const log = require('@imooc-cli-dev-myf/log')
-const { readFile, writeFile, spinnerStart } = require('@imooc-cli-dev-myf/utils');
+const log = require('@boulderai-cli/log')
+const { readFile, writeFile, spinnerStart } = require('@boulderai-cli/utils');
 const Github = require('./Github');
 const Gitee = require('./Gitee');
-const CloudBuild = require('@imooc-cli-dev-myf/cloudbuild')
+const CloudBuild = require('@boulderai-cli/cloudbuild')
 
-const DEFAULT_CLI_HOME = '.imooc-cli-dev-myf'
+const DEFAULT_CLI_HOME = '.boulderai-cli'
 const GIT_ROOT_DIR = '.git'
 const GIT_SERVER_FILE = '.git_server'
 const GIT_TOKEN_FILE = '.git_token'

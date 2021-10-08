@@ -3,9 +3,9 @@
 const path = require('path')
 const fs = require('fs')
 const fse = require('fs-extra')
-const Command = require('@imooc-cli-dev-myf/command')
-const log = require('@imooc-cli-dev-myf/log')
-const Git = require('@imooc-cli-dev-myf/git')
+const Command = require('@boulderai-cli/command')
+const log = require('@boulderai-cli/log')
+const Git = require('@boulderai-cli/git')
 
 class PublishCommand extends Command {
     init() {

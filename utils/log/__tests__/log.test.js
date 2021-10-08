@@ -2,6 +2,6 @@
 
 const log = require('..');
 
-describe('@imooc-cli-dev-myf/log', () => {
+describe('@boulderai-cli/log', () => {
     it('needs tests');
 });

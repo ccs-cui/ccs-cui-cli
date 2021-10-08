@@ -1,11 +1,11 @@
-# `@imooc-cli-dev-myf/request`
+# `@boulderai-cli/request`
 
 > TODO: description
 
 ## Usage
 
 ```
-const request = require('@imooc-cli-dev-myf/request');
+const request = require('@boulderai-cli/request');
 
 // TODO: DEMONSTRATE API
 ```

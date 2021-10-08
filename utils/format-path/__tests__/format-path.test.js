@@ -2,6 +2,6 @@
 
 const formatPath = require('..');
 
-describe('@imooc-cli-dev/format-path', () => {
+describe('@boulderai-cli/format-path', () => {
     it('needs tests');
 });

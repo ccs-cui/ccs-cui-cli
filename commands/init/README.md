@@ -1,11 +1,11 @@
-# `@imooc-cli-dev-myf/init`
+# `@boulderai-cli/init`
 
 > TODO: description
 
 ## Usage
 
 ```
-const init = require('@imooc-cli-dev-myf/init');
+const init = require('@boulderai-cli/init');
 
 // TODO: DEMONSTRATE API
 ```

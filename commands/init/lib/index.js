@@ -15,10 +15,10 @@ const glob = require('glob')
 const ejs = require('ejs')
 const semver = require('semver')
 const userHome = require('user-home')
-const Command = require('@imooc-cli-dev-myf/command')
-const Package = require('@imooc-cli-dev-myf/package')
-const log = require('@imooc-cli-dev-myf/log')
-const { spinnerStart, execAsync } = require('@imooc-cli-dev-myf/utils')
+const Command = require('@boulderai-cli/command')
+const Package = require('@boulderai-cli/package')
+const log = require('@boulderai-cli/log')
+const { spinnerStart, execAsync } = require('@boulderai-cli/utils')
 
 const getProjectTemplate = require('./getProjectTemplate')
 
@@ -189,8 +189,8 @@ class InitCommand extends Command {
     async downloadTemplate() {
         const { projectTemplate } = this.projectInfo
         this.templateInfo = this.template.find(item => item.npmName === projectTemplate)
-        const targetPath = path.resolve(userHome, '.imooc-cli-dev-myf', 'template')
-        const storeDir = path.resolve(userHome, '.imooc-cli-dev-myf', 'template', 'node_modules')
+        const targetPath = path.resolve(userHome, '.boulderai-cli', 'template')
+        const storeDir = path.resolve(userHome, '.boulderai-cli', 'template', 'node_modules')
         const { npmName, version } = this.templateInfo
         const templateNpm = new Package({
             targetPath,

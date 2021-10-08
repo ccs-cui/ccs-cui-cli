@@ -1,11 +1,11 @@
-# `@imooc-cli-dev-myf/publish`
+# `@boulderai-cli/publish`
 
 > TODO: description
 
 ## Usage
 
 ```
-const publish = require('@imooc-cli-dev-myf/publish');
+const publish = require('@boulderai-cli/publish');
 
 // TODO: DEMONSTRATE API
 ```

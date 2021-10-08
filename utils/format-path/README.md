@@ -1,11 +1,11 @@
-# `@imooc-cli-dev/format-path`
+# `@boulderai-cli/format-path`
 
 > TODO: description
 
 ## Usage
 
 ```
-const formatPath = require('@imooc-cli-dev/format-path');
+const formatPath = require('@boulderai-cli/format-path');
 
 // TODO: DEMONSTRATE API
 ```

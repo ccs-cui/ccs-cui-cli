@@ -1,13 +1,13 @@
 {
-  "name": "@imooc-cli/core",
+  "name": "@boulderai-cli/core",
   "version": "1.0.4",
-  "description": "imooc-cli-dev-myf core",
+  "description": "boulderai-cli core",
   "author": "mayefeng <mayefeng@boulderaitech.com>",
   "homepage": "",
   "license": "ISC",
   "main": "lib/core.js",
   "bin": {
-    "imooc-cli-dev-myf": "bin/index.js"
+    "boulderai-cli": "bin/index.js"
   },
   "directories": {
     "lib": "lib",
@@ -20,11 +20,11 @@
     "test": "echo \"Run testting from core\""
   },
   "dependencies": {
-    "@imooc-cli-dev-myf/exec": "file:../exec",
-    "@imooc-cli-dev-myf/get-npm-info": "file:../../utils/get-npm-info",
-    "@imooc-cli-dev-myf/init": "file:../../commands/init",
-    "@imooc-cli-dev-myf/log": "file:../../utils/log",
-    "@imooc-cli-dev-myf/utils": "file:../../utils/utils",
+    "@boulderai-cli/exec": "file:../exec",
+    "@boulderai-cli/get-npm-info": "file:../../utils/get-npm-info",
+    "@boulderai-cli/init": "file:../../commands/init",
+    "@boulderai-cli/log": "file:../../utils/log",
+    "@boulderai-cli/utils": "file:../../utils/utils",
     "colors": "^1.4.0",
     "commander": "^6.2.1",
     "dotenv": "^10.0.0",

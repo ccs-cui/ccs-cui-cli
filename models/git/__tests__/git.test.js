@@ -2,6 +2,6 @@
 
 const git = require('..');
 
-describe('@imooc-cli-dev-myf/git', () => {
+describe('@boulderai-cli/git', () => {
     it('needs tests');
 });

@@ -4,9 +4,9 @@ const fse = require('fs-extra')
 const pkgDir = require('pkg-dir').sync
 const pathExists = require('path-exists').sync
 const npminstall = require('npminstall')
-const { isObject } = require('@imooc-cli-dev-myf/utils')
-const formatPath = require('@imooc-cli-dev-myf/format-path')
-const { getDefaultRegisry, getNpmLastestVersion } = require('@imooc-cli-dev-myf/get-npm-info')
+const { isObject } = require('@boulderai-cli/utils')
+const formatPath = require('@boulderai-cli/format-path')
+const { getDefaultRegisry, getNpmLastestVersion } = require('@boulderai-cli/get-npm-info')
 
 class Package{
     constructor(options) {

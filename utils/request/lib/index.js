@@ -2,8 +2,8 @@
 
 const axios = require('axios')
 
-const BASE_URL = process.env.IMOOC_CLI_BASE_URL || 'http://book.youbaobao.xyz:7001'
-console.log(process.env.IMOOC_CLI_BASE_URL)
+const BASE_URL = process.env.BOULDERAI_CLI_BASE_URL || 'http://book.youbaobao.xyz:7001'
+console.log(process.env.BOULDERAI_CLI_BASE_URL)
 console.log(BASE_URL)
 
 const request = axios.create({

@@ -1,11 +1,11 @@
-# `@boulderai-cli/init`
+# `@cui-cli/init`
 
 > TODO: description
 
 ## Usage
 
 ```
-const init = require('@boulderai-cli/init');
+const init = require('@cui-cli/init');
 
 // TODO: DEMONSTRATE API
 ```

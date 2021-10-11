@@ -3,16 +3,20 @@
 module.exports = exec;
 
 const path = require('path')
-const Package = require('@boulderai-cli/package')
-const log = require('@boulderai-cli/log');
-const { exec: spawn } = require('@boulderai-cli/utils');
+const Package = require('@cui-cli/package')
+const log = require('@cui-cli/log');
+const { exec: spawn } = require('@cui-cli/utils');
 const { chdir } = require('process');
 
 const SETTINGS = {
-    // init: '@boulderai-cli/init'
-    init: '@boulderai-cli/init',
-    publish: '@boulderai-cli/publish',
+    // init: '@cui-cli/init'
+    init: '@cui-cli/init',
+    publish: '@cui-cli/publish',
 }
+
+// const FILE_SETTINGS = {
+//     init: '../../../commands/init/lib/index.js'
+// }
 
 const CACHE_DIR = 'dependencies/'
 
@@ -30,6 +34,7 @@ async function exec() {
     // console.log(cmdobj.name())
     const cmdName = cmdobj.name() // 可以做一个映射表把我们的init映射到具体的package
     const packageName = SETTINGS[cmdName]
+    // const file = FILE_SETTINGS[cmdName]
     const packageVersion = 'latest'
     // const packageVersion = '1.1.0'
 
@@ -67,6 +72,8 @@ async function exec() {
         // 封装 -> 复用
     }
     const rootFile = pkg.getRootFilePath()
+
+    // const rootFile = path.resolve(__dirname, file)
     // console.log('rootFile', rootFile)
     if (rootFile) {
         try { 

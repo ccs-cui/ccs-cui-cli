@@ -1,11 +1,11 @@
-# `@boulderai-cli/log`
+# `@cui-cli/log`
 
 > TODO: description
 
 ## Usage
 
 ```
-const log = require('@boulderai-cli/log');
+const log = require('@cui-cli/log');
 
 // TODO: DEMONSTRATE API
 ```

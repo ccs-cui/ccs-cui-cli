@@ -1,9 +1,8 @@
 {
-  "name": "@boulderai-cli/git",
+  "name": "@cui-cli/git",
   "version": "1.0.0",
-  "description": "> TODO: description",
-  "author": "mayefeng <mayefeng@163.com>",
-  "homepage": "https://github.com/mayefeng/boulderai-cli#readme",
+  "description": "gitFlow",
+  "author": "mayefeng",
   "license": "ISC",
   "main": "lib/index.js",
   "directories": {
@@ -11,25 +10,20 @@
     "test": "__tests__"
   },
   "files": [
-    "lib"
+    "lib",
+    "test"
   ],
   "publishConfig": {
     "access": "public"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mayefeng/boulderai-cli.git"
-  },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
-  "bugs": {
-    "url": "https://github.com/mayefeng/boulderai-cli/issues"
-  },
   "dependencies": {
-    "@boulderai-cli/cloudbuild": "file:../../models/cloudbuild",
-    "@boulderai-cli/log": "file:../../utils/log",
-    "@boulderai-cli/utils": "file:../../utils/utils",
+    "@cui-cli/cloudbuild": "^1.0.0",
+    "@cui-cli/log": "^1.0.0",
+    "@cui-cli/request": "^1.0.0",
+    "@cui-cli/utils": "^1.0.0",
     "axios": "^0.22.0",
     "fs-extra": "^10.0.0",
     "inquirer": "^8.1.2",

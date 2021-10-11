@@ -2,9 +2,7 @@
 
 const axios = require('axios')
 
-const BASE_URL = process.env.BOULDERAI_CLI_BASE_URL || 'http://book.youbaobao.xyz:7001'
-console.log(process.env.BOULDERAI_CLI_BASE_URL)
-console.log(BASE_URL)
+const BASE_URL = process.env.CUI_CLI_BASE_URL || 'http://${apiHost}/api/metabase/'
 
 const request = axios.create({
     baseURL: BASE_URL,

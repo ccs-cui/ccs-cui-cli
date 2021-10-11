@@ -2,6 +2,6 @@
 
 const package = require('..');
 
-describe('@boulderai-cli/package', () => {
+describe('@cui-cli/package', () => {
     it('needs tests');
 });

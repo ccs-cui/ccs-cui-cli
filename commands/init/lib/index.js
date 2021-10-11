@@ -15,10 +15,10 @@ const glob = require('glob')
 const ejs = require('ejs')
 const semver = require('semver')
 const userHome = require('user-home')
-const Command = require('@boulderai-cli/command')
-const Package = require('@boulderai-cli/package')
-const log = require('@boulderai-cli/log')
-const { spinnerStart, execAsync } = require('@boulderai-cli/utils')
+const Command = require('@cui-cli/command')
+const Package = require('@cui-cli/package')
+const log = require('@cui-cli/log')
+const { spinnerStart, execAsync } = require('@cui-cli/utils')
 
 const getProjectTemplate = require('./getProjectTemplate')
 
@@ -112,6 +112,7 @@ class InitCommand extends Command {
                 cwd: dir,
                 ignore: options.ignore,
                 nodir: true,
+                dot: true,
             }, (err, files) => {
                 if (err) {
                     reject(err)
@@ -142,11 +143,11 @@ class InitCommand extends Command {
         // 拷贝模板代码至当前目录
         const spinner = spinnerStart('正在安装模板')
         try {
-        const tempaltePath = path.resolve(this.templateNpm.cacheFilePath, 'template')
-        const targetPath = process.cwd()
-        fse.ensureDirSync(tempaltePath)
-        fse.ensureDirSync(targetPath)
-        fse.copySync(tempaltePath, targetPath)
+            const tempaltePath = path.resolve(this.templateNpm.cacheFilePath, 'template')
+            const targetPath = process.cwd()
+            fse.ensureDirSync(tempaltePath)
+            fse.ensureDirSync(targetPath)
+            fse.copySync(tempaltePath, targetPath)
         } catch (e) {
             throw e
         } finally {
@@ -171,10 +172,10 @@ class InitCommand extends Command {
             log.notice('开始执行自定义模板');
             const templatePath = path.resolve(this.templateNpm.cacheFilePath, 'template');
             const options = {
-            templateInfo: this.templateInfo,
-            projectInfo: this.projectInfo,
-            sourcePath: templatePath,
-            targetPath: process.cwd(),
+                templateInfo: this.templateInfo,
+                projectInfo: this.projectInfo,
+                sourcePath: templatePath,
+                targetPath: process.cwd(),
             };
             const code = `require('${rootFile}')(${JSON.stringify(options)})`;
             log.verbose('code', code);
@@ -189,8 +190,8 @@ class InitCommand extends Command {
     async downloadTemplate() {
         const { projectTemplate } = this.projectInfo
         this.templateInfo = this.template.find(item => item.npmName === projectTemplate)
-        const targetPath = path.resolve(userHome, '.boulderai-cli', 'template')
-        const storeDir = path.resolve(userHome, '.boulderai-cli', 'template', 'node_modules')
+        const targetPath = path.resolve(userHome, '.cui-cli', 'template')
+        const storeDir = path.resolve(userHome, '.cui-cli', 'template', 'node_modules')
         const { npmName, version } = this.templateInfo
         const templateNpm = new Package({
             targetPath,
@@ -238,7 +239,6 @@ class InitCommand extends Command {
     async prepare() {
         // 0、判断项目模板是否存在
         const template = await getProjectTemplate()
-        // console.log('template', template)
         if (!template || template.length === 0) {
             throw new Error('项目模板不存在')
         }

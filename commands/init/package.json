@@ -1,9 +1,8 @@
 {
-  "name": "@boulderai-cli/init",
+  "name": "@cui-cli/init",
   "version": "1.0.0",
-  "description": "boulderai-cli init",
-  "author": "mayefeng <mayefeng@163.com>",
-  "homepage": "https://github.com/mayefeng/boulderai-cli#readme",
+  "description": "cui-cli init",
+  "author": "mayefeng",
   "license": "ISC",
   "main": "lib/index.js",
   "directories": {
@@ -11,24 +10,18 @@
     "test": "__tests__"
   },
   "files": [
-    "lib"
+    "lib",
+    "test"
   ],
-  "publishConfig": {
-    "access": "public"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mayefeng/boulderai-cli.git"
-  },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
-    "@boulderai-cli/command": "file:../../models/command",
-    "@boulderai-cli/log": "file:../../utils/log",
-    "@boulderai-cli/package": "file:../../models/package",
-    "@boulderai-cli/request": "file:../../utils/request",
-    "@boulderai-cli/utils": "file:../../utils/utils",
+    "@cui-cli/command": "^1.0.0",
+    "@cui-cli/log": "^1.0.0",
+    "@cui-cli/package": "^1.0.0",
+    "@cui-cli/request": "^1.0.0",
+    "@cui-cli/utils": "^1.0.0",
     "ejs": "^3.1.6",
     "fs-extra": "^10.0.0",
     "glob": "^7.1.7",
@@ -37,7 +30,7 @@
     "semver": "^7.3.5",
     "user-home": "^3.0.0"
   },
-  "bugs": {
-    "url": "https://github.com/mayefeng/boulderai-cli/issues"
+  "publishConfig": {
+    "registry": "http://npm.${host}.com/"
   }
 }

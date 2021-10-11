@@ -8,13 +8,14 @@ const userHome = require('user-home')
 const inquirer = require('inquirer')
 const terminalLink = require('terminal-link')
 const semver = require('semver')
-const log = require('@boulderai-cli/log')
-const { readFile, writeFile, spinnerStart } = require('@boulderai-cli/utils');
-const Github = require('./Github');
-const Gitee = require('./Gitee');
-const CloudBuild = require('@boulderai-cli/cloudbuild')
+const log = require('@cui-cli/log')
+const { readFile, writeFile, spinnerStart } = require('@cui-cli/utils')
+const request = require('@cui-cli/request')
+const Github = require('./Github')
+const Gitee = require('./Gitee')
+const CloudBuild = require('@cui-cli/cloudbuild')
 
-const DEFAULT_CLI_HOME = '.boulderai-cli'
+const DEFAULT_CLI_HOME = '.cui-cli'
 const GIT_ROOT_DIR = '.git'
 const GIT_SERVER_FILE = '.git_server'
 const GIT_TOKEN_FILE = '.git_token'
@@ -30,6 +31,7 @@ const REPO_OWNER_USER = 'user'
 const REPO_OWNER_ORG = 'org'
 const VERSION_RELEASE = 'release'
 const VERSION_DEVELOP = 'dev'
+const TEMPLATE_TEMP_DIR = 'oss'
 
 const GIT_SERVER_TYPE = [
     {
@@ -77,7 +79,10 @@ class Git {
         refreshToken = false,
         refreshOwner = false,
         buildCmd = '',
-        prod = false
+        prod = false,
+        sshUser = '',
+        sshIp = '',
+        sshPath = '',
     }) {
         // 项目名称
         this.name = name
@@ -115,6 +120,10 @@ class Git {
         this.gitPublish = null
         // 是否正式发布
         this.prod = prod
+        this.sshUser = sshUser
+        this.sshIp = sshIp
+        this.sshPath = sshPath
+        log.verbose('ssh config', this.sshUser, this.sshIp, this.sshPath,)
     }
 
     async prepare() {
@@ -170,7 +179,105 @@ class Git {
         })
         await cloudBuild.prepare()
         await cloudBuild.init()
-        await cloudBuild.build()
+        const ret = await cloudBuild.build()
+        if (ret) {
+            await this.uploadTemplate()
+        }
+        if (this.prod && ret) {
+            // 打tag
+            await this.checkTag()
+            // 切换分支到master
+            await this.checkoutBranch('master')
+            // 将开发分支代码合并到master
+            await this.mergeBranchToMaster()
+            // 将代码推送到远程master
+            await this.pushRemoteRepo('master')
+            // 删除本地开发分支
+            await this.deleteLocalBranch()
+            // 删除远程开发分支
+            await this.deleteRemoteBranch()
+        }
+    }
+
+    async deleteLocalBranch() {
+        log.info('开始删除本地开发分支', this.branch);
+        await this.git.deleteLocalBranch(this.branch);
+        log.success('删除本地分支成功', this.branch);
+    }
+
+    async deleteRemoteBranch() {
+      log.info('开始删除远程分支', this.branch);
+      await this.git.push(['origin', '--delete', this.branch]);
+      log.success('删除远程分支成功', this.branch);
+    }
+
+    async mergeBranchToMaster() {
+        log.info('开始合并代码', `[${this.branch}] -> [master]`)
+        await this.git.mergeFromTo(this.branch, 'master')
+        log.success('代码合并成功', `[${this.branch}] -> [master]`)
+    }
+
+    async checkTag() {
+        log.info('获取远程 tag 列表')
+        const tag = `${VERSION_RELEASE}/${this.version}`
+        const tagList = await this.getRemoteBranchList(VERSION_RELEASE)
+        if (tagList.includes(this.version)) {
+            log.success('远程 tag 已存在', tag)
+            await this.git.push(['origin', `:refs/tags/${tag}`])
+            log.success('远程 tag 已删除', tag)
+        }
+        const localTagList = await this.git.tags()
+        if (localTagList.all.includes(tag)) {
+            log.success('本地 tag 已存在', tag)
+            await this.git.tag(['-d', tag])
+            log.success('本地 tag 已删除', tag)
+        }
+        await this.git.addTag(tag)
+        log.success('本地 tag 创建成功', tag)
+        await this.git.pushTags('origin')
+        log.success('远程 tag 推送成功')        
+    }
+
+    async uploadTemplate() {
+        const TEMPLATE_FILE_NAME = 'index.html'
+        if (this.sshUser && this.sshIp && this.sshPath) {
+            log.info('开始下载模板文件')
+            let ossTemplateFile = await request({
+                url: '/oss/get',
+                params: {
+                    name: this.name,
+                    type: this.prod ? 'prod' : 'dev',
+                    file: TEMPLATE_FILE_NAME,
+                }
+            })
+            if (ossTemplateFile.code === 0 && ossTemplateFile.data) {
+                ossTemplateFile = ossTemplateFile.data
+            }
+            log.verbose('模板文件url', ossTemplateFile.url)
+            const response = await request({
+                url: ossTemplateFile.url,
+                method: 'get'
+            })
+            if (response) {
+                const ossTempDir = path.resolve(this.homePath, TEMPLATE_TEMP_DIR, `${this.name}@${this.version }`)
+                if (!fs.existsSync(ossTempDir)) {
+                    fse.mkdirpSync(ossTempDir)
+                } else {
+                    fse.emptyDirSync(ossTempDir)
+                }
+                const templateFilePath = path.resolve(ossTempDir, TEMPLATE_FILE_NAME)
+                fse.createFileSync(templateFilePath)
+                fs.writeFileSync(templateFilePath, response)
+                log.success('模板文件下载成功', templateFilePath)
+                log.info('开始上传模板文件至服务器')
+                // TO READ
+                const uploadCmd = `scp -r ${templateFilePath} ${this.sshUser}@${this.sshIp}:${this.sshPath}`
+                log.verbose('uploadCmd', uploadCmd)
+                const ret = require('child_process').execSync(uploadCmd)
+                log.success('模板文件上传成功')
+                fse.emptyDirSync(ossTempDir)
+            }
+        }
     }
 
     async preparePublish() {

@@ -1,9 +1,8 @@
 {
-  "name": "@boulderai-cli/package",
+  "name": "@cui-cli/package",
   "version": "1.0.0",
-  "description": "boulderai-cli npm modules",
-  "author": "mayefeng <mayefeng@163.com>",
-  "homepage": "https://github.com/mayefeng/boulderai-cli#readme",
+  "description": "cui-cli npm modules",
+  "author": "mayefeng",
   "license": "ISC",
   "main": "lib/index.js",
   "directories": {
@@ -16,23 +15,16 @@
   "publishConfig": {
     "access": "public"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mayefeng/boulderai-cli.git"
-  },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
-    "@boulderai-cli/format-path": "file:../../utils/format-path",
-    "@boulderai-cli/get-npm-info": "file:../../utils/get-npm-info",
-    "@boulderai-cli/utils": "file:../../utils/utils",
+    "@cui-cli/format-path": "^1.0.0",
+    "@cui-cli/get-npm-info": "^1.0.0",
+    "@cui-cli/utils": "^1.0.0",
     "fs-extra": "^10.0.0",
     "npminstall": "^4.11.0",
     "path-exists": "^4.0.0",
     "pkg-dir": "^5.0.0"
-  },
-  "bugs": {
-    "url": "https://github.com/mayefeng/boulderai-cli/issues"
   }
 }

@@ -1,12 +1,11 @@
 {
-  "name": "@boulderai-cli/log",
-  "version": "1.0.4",
-  "description": "boulderai-cli log",
+  "name": "@cui-cli/log",
+  "version": "1.0.0",
+  "description": "cui-cli log",
   "keywords": [
     "log"
   ],
-  "author": "mayefeng <mayefeng@163.com>",
-  "homepage": "https://github.com/mayefeng/boulderai-cli#readme",
+  "author": "mayefeng",
   "license": "ISC",
   "main": "lib/index.js",
   "directories": {
@@ -19,15 +18,8 @@
   "publishConfig": {
     "access": "public"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mayefeng/boulderai-cli.git"
-  },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
-  },
-  "bugs": {
-    "url": "https://github.com/mayefeng/boulderai-cli/issues"
   },
   "dependencies": {
     "npmlog": "^5.0.0"

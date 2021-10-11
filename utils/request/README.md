@@ -1,11 +1,11 @@
-# `@boulderai-cli/request`
+# `@cui-cli/request`
 
 > TODO: description
 
 ## Usage
 
 ```
-const request = require('@boulderai-cli/request');
+const request = require('@cui-cli/request');
 
 // TODO: DEMONSTRATE API
 ```

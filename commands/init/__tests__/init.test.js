@@ -2,6 +2,6 @@
 
 const init = require('..');
 
-describe('@boulderai-cli/init', () => {
+describe('@cui-cli/init', () => {
     it('needs tests');
 });

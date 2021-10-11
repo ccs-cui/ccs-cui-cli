@@ -2,6 +2,6 @@
 
 const exec = require('..');
 
-describe('@boulderai-cli/exec', () => {
+describe('@cui-cli/exec', () => {
     it('needs tests');
 });

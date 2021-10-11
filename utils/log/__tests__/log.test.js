@@ -2,6 +2,6 @@
 
 const log = require('..');
 
-describe('@boulderai-cli/log', () => {
+describe('@cui-cli/log', () => {
     it('needs tests');
 });

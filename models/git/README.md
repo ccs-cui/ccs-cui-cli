@@ -1,11 +1,11 @@
-# `@boulderai-cli/git`
+# `@cui-cli/git`
 
 > TODO: description
 
 ## Usage
 
 ```
-const git = require('@boulderai-cli/git');
+const git = require('@cui-cli/git');
 
 // TODO: DEMONSTRATE API
 ```

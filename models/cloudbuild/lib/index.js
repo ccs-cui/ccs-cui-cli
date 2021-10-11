@@ -3,8 +3,8 @@
 const io = require('socket.io-client')
 const inquirer = require('inquirer')
 const get = require('lodash/get')
-const log = require('@boulderai-cli/log')
-const request = require('@boulderai-cli/request')
+const log = require('@cui-cli/log')
+const request = require('@cui-cli/request')
 
 const WS_SERVER = 'http://127.0.0.1:7001'
 // const WS_SERVER = 'http://book.youbaobao.xyz:7001'
@@ -119,6 +119,7 @@ class CloudBuild {
     }
 
     build() {
+        let ret = true
         return new Promise((resolve, reject) => {
             this.socket.emit('build')
             this.socket.on('build', (msg) => {
@@ -128,12 +129,19 @@ class CloudBuild {
                     clearTimeout(this.timer)
                     this.socket.disconnect()
                     this.socket.close()
+                    ret = false
                 } else {
                     log.success(parsedMsg.action, parsedMsg.message)
                 }
             })
             this.socket.on('building', msg => {
                 console.log(msg)
+            })            
+            this.socket.on('disconnect', () => {
+                resolve(ret)
+            })
+            this.socket.on('error', err => {
+                reject(err)
             })
         })
     }

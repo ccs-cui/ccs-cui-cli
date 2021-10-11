@@ -1,11 +1,11 @@
-# `@boulderai-cli/publish`
+# `@cui-cli/publish`
 
 > TODO: description
 
 ## Usage
 
 ```
-const publish = require('@boulderai-cli/publish');
+const publish = require('@cui-cli/publish');
 
 // TODO: DEMONSTRATE API
 ```

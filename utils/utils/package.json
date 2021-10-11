@@ -1,8 +1,8 @@
 {
-  "name": "@boulderai-cli/utils",
-  "version": "1.0.4",
-  "description": "boulderai-cli utils",
-  "author": "mayefeng <mayefeng@boulderaitech.com>",
+  "name": "@cui-cli/utils",
+  "version": "1.0.0",
+  "description": "cui-cli utils",
+  "author": "mayefeng",
   "homepage": "",
   "license": "ISC",
   "main": "lib/index.js",
@@ -16,7 +16,6 @@
   "scripts": {
     "test": "echo \"Run testing from utils\""
   },
-  "gitHead": "b162764607513499ee7df7e4365b377152704abd",
   "publishConfig": {
     "access": "public"
   },

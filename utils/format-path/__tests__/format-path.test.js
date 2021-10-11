@@ -2,6 +2,6 @@
 
 const formatPath = require('..');
 
-describe('@boulderai-cli/format-path', () => {
+describe('@cui-cli/format-path', () => {
     it('needs tests');
 });

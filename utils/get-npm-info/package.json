@@ -1,9 +1,9 @@
 {
-  "name": "get-npm-info",
-  "version": "1.0.4",
+  "name": "@cui-cli/get-npm-info",
+  "version": "1.0.0",
   "description": "get npm info",
-  "author": "mayefeng <mayefeng@163.com>",
-  "homepage": "https://github.com/mayefeng/boulderai-cli#readme",
+  "author": "mayefeng",
+  "homepage": "https://github.com/mayefeng/cui-cli#readme",
   "license": "ISC",
   "main": "lib/index.js",
   "directories": {
@@ -13,15 +13,8 @@
   "files": [
     "lib"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mayefeng/boulderai-cli.git"
-  },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
-  },
-  "bugs": {
-    "url": "https://github.com/mayefeng/boulderai-cli/issues"
   },
   "dependencies": {
     "axios": "^0.21.1",

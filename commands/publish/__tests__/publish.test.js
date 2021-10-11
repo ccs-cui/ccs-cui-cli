@@ -2,6 +2,6 @@
 
 const publish = require('..');
 
-describe('@boulderai-cli/publish', () => {
+describe('@cui-cli/publish', () => {
     it('needs tests');
 });

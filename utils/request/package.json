@@ -1,9 +1,8 @@
 {
-  "name": "@boulderai-cli/request",
+  "name": "@cui-cli/request",
   "version": "1.0.0",
   "description": "> TODO: description",
-  "author": "mayefeng <mayefeng@163.com>",
-  "homepage": "https://github.com/mayefeng/boulderai-cli#readme",
+  "author": "mayefeng",
   "license": "ISC",
   "main": "lib/index.js",
   "directories": {
@@ -16,15 +15,8 @@
   "publishConfig": {
     "access": "public"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mayefeng/boulderai-cli.git"
-  },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
-  },
-  "bugs": {
-    "url": "https://github.com/mayefeng/boulderai-cli/issues"
   },
   "dependencies": {
     "axios": "^0.21.1"

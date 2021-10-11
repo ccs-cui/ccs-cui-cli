@@ -2,6 +2,6 @@
 
 const command = require('..');
 
-describe('@boulderai-cli/Command', () => {
+describe('@cui-cli/Command', () => {
     it('needs tests');
 });

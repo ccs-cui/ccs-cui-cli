@@ -2,6 +2,6 @@
 
 const git = require('..');
 
-describe('@boulderai-cli/git', () => {
+describe('@cui-cli/git', () => {
     it('needs tests');
 });

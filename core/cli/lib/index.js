@@ -8,13 +8,12 @@ const colors = require('colors/safe')
 const userHome = require('user-home')
 const pathExists = require('path-exists').sync
 const commander = require('commander')
-const log = require('@boulderai-cli/log')
-// const init = require('@boulderai-cli/init')
-const exec = require('@boulderai-cli/exec')
+const log = require('@cui-cli/log')
+// const init = require('@cui-cli/init')
+const exec = require('@cui-cli/exec')
 
 const pkg = require('../package.json');
 const constant = require('./const');
-const getNpmInfo = require('@boulderai-cli/get-npm-info');
 
 let args, config;
 
@@ -54,6 +53,9 @@ function regiserCommand() {
         .option('--refreshOwner', '强制更新远程仓库类型')
         .option('--buildCmd <buildCmd>', '构建命令')
         .option('--prod', '是否正式发布')
+        .option('--sshUser <sshUser>', '模板服务器用户名')
+        .option('--sshIp <sspIp>', '模板服务器或域名')
+        .option('--sshPath <sshPath>', '模板服务器上传路径')
         .action(exec)
 
     // 开启debug模式的监听
@@ -84,7 +86,7 @@ function regiserCommand() {
 
     program.parse(process.argv)
 
-    if (program.args?.length < 1) {
+    if (program.args && program.args.length < 1) {
         program.outputHelp()
     }
 }
@@ -105,7 +107,7 @@ async function checkGlobalUpdate() {
     const currentVersion = pkg.version;
     const npmName = pkg.name
     // 2、调用npm API，获取所有版本号
-    const { getNpmSemverVersion } = require('@boulderai-cli/get-npm-info')
+    const { getNpmSemverVersion } = require('@cui-cli/get-npm-info')
     const lastVersion = await getNpmSemverVersion(currentVersion, npmName)
     if (lastVersion && semver.gt(lastVersion, currentVersion)) {
         // log.warn('更新提示', colors.yellow(`
@@ -182,7 +184,7 @@ function checkRoot() {
 //     const lowestNodeVersion = constant.LOWEST_NODE_VERSION
 
 //     if (!semver.gte(currentVersion, lowestNodeVersion)) {
-//         throw new Error(colors.red(`boulderai-cli 需要安装 v${lowestNodeVersion}以上版本的 Node.js` ))
+//         throw new Error(colors.red(`cui-cli 需要安装 v${lowestNodeVersion}以上版本的 Node.js` ))
 //     }
 // }
 

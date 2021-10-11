@@ -3,9 +3,9 @@
 const path = require('path')
 const fs = require('fs')
 const fse = require('fs-extra')
-const Command = require('@boulderai-cli/command')
-const log = require('@boulderai-cli/log')
-const Git = require('@boulderai-cli/git')
+const Command = require('@cui-cli/command')
+const log = require('@cui-cli/log')
+const Git = require('@cui-cli/git')
 
 class PublishCommand extends Command {
     init() {
@@ -17,6 +17,9 @@ class PublishCommand extends Command {
             refreshOwner: this._cmd.refreshOwner,
             buildCmd: this._cmd.buildCmd,
             prod: this._cmd.prod,
+            sshUser: this._cmd.sshUser,
+            sshIp: this._cmd.sshIp,
+            sshPath: this._cmd.sshPath,
         }
     }
 

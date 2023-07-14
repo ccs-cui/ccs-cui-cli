@@ -1,6 +1,6 @@
 {
-  "name": "@cui-cli/request",
-  "version": "1.0.0",
+  "name": "@ccs-cui-cli/request",
+  "version": "1.0.4",
   "description": "> TODO: description",
   "author": "mayefeng",
   "license": "ISC",
@@ -13,6 +13,7 @@
     "lib"
   ],
   "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
     "access": "public"
   },
   "scripts": {

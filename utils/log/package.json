@@ -1,7 +1,7 @@
 {
-  "name": "@cui-cli/log",
+  "name": "@ccs-cui-cli/log",
   "version": "1.0.0",
-  "description": "cui-cli log",
+  "description": "ccs-cui-cli log",
   "keywords": [
     "log"
   ],
@@ -16,6 +16,7 @@
     "lib"
   ],
   "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
     "access": "public"
   },
   "scripts": {

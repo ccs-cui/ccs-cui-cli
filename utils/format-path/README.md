@@ -1,11 +1,11 @@
-# `@cui-cli/format-path`
+# `@ccs-cui-cli/format-path`
 
 > TODO: description
 
 ## Usage
 
 ```
-const formatPath = require('@cui-cli/format-path');
+const formatPath = require('@ccs-cui-cli/format-path');
 
 // TODO: DEMONSTRATE API
 ```

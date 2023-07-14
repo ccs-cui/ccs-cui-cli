@@ -15,10 +15,10 @@ const glob = require('glob')
 const ejs = require('ejs')
 const semver = require('semver')
 const userHome = require('user-home')
-const Command = require('@cui-cli/command')
-const Package = require('@cui-cli/package')
-const log = require('@cui-cli/log')
-const { spinnerStart, execAsync } = require('@cui-cli/utils')
+const Command = require('@ccs-cui-cli/command')
+const Package = require('@ccs-cui-cli/package')
+const log = require('@ccs-cui-cli/log')
+const { spinnerStart, execAsync } = require('@ccs-cui-cli/utils')
 
 const getProjectTemplate = require('./getProjectTemplate')
 
@@ -28,7 +28,7 @@ const TYPE_COMPONENT = 'component'
 const TEMPLATE_TYPE_NORMAL = 'normal'
 const TEMPLATE_TYPE_CUSTOM = 'custom'
 
-const WHITE_COMMAND = ['npm', 'cnpm']
+const WHITE_COMMAND = ['npm', 'cnpm', 'yarn', 'pnpm', 'tyarn']
 
 class InitCommand extends Command {
     init() {
@@ -190,8 +190,8 @@ class InitCommand extends Command {
     async downloadTemplate() {
         const { projectTemplate } = this.projectInfo
         this.templateInfo = this.template.find(item => item.npmName === projectTemplate)
-        const targetPath = path.resolve(userHome, '.cui-cli', 'template')
-        const storeDir = path.resolve(userHome, '.cui-cli', 'template', 'node_modules')
+        const targetPath = path.resolve(userHome, '.ccs-cui-cli', 'template')
+        const storeDir = path.resolve(userHome, '.ccs-cui-cli', 'template', 'node_modules')
         const { npmName, version } = this.templateInfo
         const templateNpm = new Package({
             targetPath,
@@ -292,7 +292,7 @@ class InitCommand extends Command {
         const { type } = await inquirer.prompt({
             type: 'list',
             name: 'type',
-            message: '请选择初始化类型',
+            message: '🐂 请选择初始化类型',
             default: TYPE_PROJECT,
             choices: [
                 {
@@ -311,7 +311,7 @@ class InitCommand extends Command {
         const title = type === TYPE_PROJECT ? '项目' : '组件'
         const projectNamePrompt = {
             type: 'input',
-            message: `请输入${title}的名称`,
+            message: `🚀 请输入${title}的名称`,
             name: 'projectName',
             default: '',
             validate: function(v) {
@@ -342,7 +342,7 @@ class InitCommand extends Command {
             {
                 type: 'input',
                 name: 'projectVersion',
-                message: `请输入${title}版本号`,
+                message: `📦 请输入${title}版本号`,
                 default: '1.0.0',
                 validate: function(v) {
                     const done = this.async();
@@ -366,7 +366,7 @@ class InitCommand extends Command {
             {
                 type: 'list',
                 name: 'projectTemplate',
-                message: `请选择${title}模板`,
+                message: `🎉 请选择${title}模板`,
                 choices: this.createTemplateChoices()
             })
         if (type === TYPE_PROJECT) {

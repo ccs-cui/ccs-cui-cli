@@ -1,7 +1,7 @@
 {
-  "name": "@cui-cli/utils",
+  "name": "@ccs-cui-cli/utils",
   "version": "1.0.0",
-  "description": "cui-cli utils",
+  "description": "ccs-cui-cli utils",
   "author": "mayefeng",
   "homepage": "",
   "license": "ISC",
@@ -17,6 +17,7 @@
     "test": "echo \"Run testing from utils\""
   },
   "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
     "access": "public"
   },
   "dependencies": {

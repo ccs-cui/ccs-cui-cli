@@ -21,7 +21,7 @@ function getNpmInfo(npmName, registry) {
 }
 
 function getDefaultRegisry(isOriginal = false) {
-    return isOriginal ? 'https://registry.npmjs.org' : 'http://npm.${host}.com'
+    return isOriginal ? 'https://registry.npmjs.org' : 'https://registry.npmmirror.com'
 }
 
 async function getNpmVersions(npmName, registry) {

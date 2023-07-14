@@ -2,6 +2,6 @@
 
 const command = require('..');
 
-describe('@cui-cli/Command', () => {
+describe('@ccs-cui-cli/Command', () => {
     it('needs tests');
 });

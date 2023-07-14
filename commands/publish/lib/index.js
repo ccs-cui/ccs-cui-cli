@@ -3,9 +3,9 @@
 const path = require('path')
 const fs = require('fs')
 const fse = require('fs-extra')
-const Command = require('@cui-cli/command')
-const log = require('@cui-cli/log')
-const Git = require('@cui-cli/git')
+const Command = require('@ccs-cui-cli/command')
+const log = require('@ccs-cui-cli/log')
+const Git = require('@ccs-cui-cli/git')
 
 class PublishCommand extends Command {
     init() {

@@ -2,7 +2,8 @@
 
 const axios = require('axios')
 
-const BASE_URL = process.env.CUI_CLI_BASE_URL || 'http://${apiHost}/api/metabase/'
+// const BASE_URL = process.env.CUI_CLI_BASE_URL || 'http://dev.crius.com'
+const BASE_URL = 'https://dev.crius.com'
 
 const request = axios.create({
     baseURL: BASE_URL,

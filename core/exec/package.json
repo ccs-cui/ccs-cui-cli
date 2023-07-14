@@ -1,7 +1,7 @@
 {
-  "name": "@cui-cli/exec",
+  "name": "@ccs-cui-cli/exec",
   "version": "1.0.0",
-  "description": "cui-cli execute package",
+  "description": "ccs-cui-cli execute package",
   "author": "mayefeng",
   "license": "ISC",
   "main": "lib/index.js",
@@ -14,14 +14,15 @@
     "test"
   ],
   "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
     "access": "public"
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
-    "@cui-cli/log": "^1.0.0",
-    "@cui-cli/package": "^1.0.0",
-    "@cui-cli/utils": "^1.0.0"
+    "@ccs-cui-cli/log": "^1.0.0",
+    "@ccs-cui-cli/package": "^1.0.0",
+    "@ccs-cui-cli/utils": "^1.0.0"
   }
 }

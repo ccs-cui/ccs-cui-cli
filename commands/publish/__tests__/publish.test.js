@@ -2,6 +2,6 @@
 
 const publish = require('..');
 
-describe('@cui-cli/publish', () => {
+describe('@ccs-cui-cli/publish', () => {
     it('needs tests');
 });

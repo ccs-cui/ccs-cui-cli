@@ -1,13 +1,13 @@
 {
-  "name": "@cui-cli/core",
-  "version": "1.0.0",
-  "description": "cui-cli core",
+  "name": "@ccs-cui-cli/core",
+  "version": "1.0.2",
+  "description": "ccs-cui-cli core",
   "author": "mayefeng",
   "homepage": "",
   "license": "ISC",
   "main": "lib/core.js",
   "bin": {
-    "cui-cli": "bin/index.js"
+    "ccs-cui-cli": "bin/index.js"
   },
   "directories": {
     "lib": "lib",
@@ -21,11 +21,11 @@
     "test": "echo \"Run testting from core\""
   },
   "dependencies": {
-    "@cui-cli/exec": "^1.0.0",
-    "@cui-cli/get-npm-info": "^1.0.0",
-    "@cui-cli/init": "^1.0.0",
-    "@cui-cli/log": "^1.0.0",
-    "@cui-cli/utils": "^1.0.0",
+    "@ccs-cui-cli/exec": "^1.0.0",
+    "@ccs-cui-cli/get-npm-info": "^1.0.3",
+    "@ccs-cui-cli/init": "^1.0.0",
+    "@ccs-cui-cli/log": "^1.0.0",
+    "@ccs-cui-cli/utils": "^1.0.0",
     "colors": "^1.4.0",
     "commander": "^6.2.1",
     "dotenv": "^10.0.0",
@@ -38,6 +38,7 @@
     "user-home": "^3.0.0"
   },
   "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
     "access": "public"
   }
 }

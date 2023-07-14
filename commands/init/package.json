@@ -1,7 +1,7 @@
 {
-  "name": "@cui-cli/init",
-  "version": "1.0.0",
-  "description": "cui-cli init",
+  "name": "@ccs-cui-cli/init",
+  "version": "1.0.34",
+  "description": "ccs-cui-cli init",
   "author": "mayefeng",
   "license": "ISC",
   "main": "lib/index.js",
@@ -17,13 +17,13 @@
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
-    "@cui-cli/command": "^1.0.0",
-    "@cui-cli/log": "^1.0.0",
-    "@cui-cli/package": "^1.0.0",
-    "@cui-cli/request": "^1.0.0",
-    "@cui-cli/utils": "^1.0.0",
+    "@ccs-cui-cli/command": "^1.0.0",
+    "@ccs-cui-cli/log": "^1.0.0",
+    "@ccs-cui-cli/package": "^1.0.0",
+    "@ccs-cui-cli/request": "1.0.4",
+    "@ccs-cui-cli/utils": "^1.0.0",
     "ejs": "^3.1.6",
-    "fs-extra": "^10.0.0",
+    "fs-extra": "^10.1.0",
     "glob": "^7.1.7",
     "inquirer": "^8.1.2",
     "kebab-case": "^1.0.1",
@@ -31,6 +31,7 @@
     "user-home": "^3.0.0"
   },
   "publishConfig": {
-    "registry": "http://npm.${host}.com/"
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
   }
 }

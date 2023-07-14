@@ -2,6 +2,6 @@
 
 const formatPath = require('..');
 
-describe('@cui-cli/format-path', () => {
+describe('@ccs-cui-cli/format-path', () => {
     it('needs tests');
 });

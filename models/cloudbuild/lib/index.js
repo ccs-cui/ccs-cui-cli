@@ -3,8 +3,8 @@
 const io = require('socket.io-client')
 const inquirer = require('inquirer')
 const get = require('lodash/get')
-const log = require('@cui-cli/log')
-const request = require('@cui-cli/request')
+const log = require('@ccs-cui-cli/log')
+const request = require('@ccs-cui-cli/request')
 
 const WS_SERVER = 'http://127.0.0.1:7001'
 // const WS_SERVER = 'http://book.youbaobao.xyz:7001'

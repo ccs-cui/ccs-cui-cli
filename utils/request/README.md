@@ -1,11 +1,11 @@
-# `@cui-cli/request`
+# `@ccs-cui-cli/request`
 
 > TODO: description
 
 ## Usage
 
 ```
-const request = require('@cui-cli/request');
+const request = require('@ccs-cui-cli/request');
 
 // TODO: DEMONSTRATE API
 ```

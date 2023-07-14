@@ -2,6 +2,6 @@
 
 const log = require('..');
 
-describe('@cui-cli/log', () => {
+describe('@ccs-cui-cli/log', () => {
     it('needs tests');
 });

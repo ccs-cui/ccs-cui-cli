@@ -8,9 +8,9 @@ const colors = require('colors/safe')
 const userHome = require('user-home')
 const pathExists = require('path-exists').sync
 const commander = require('commander')
-const log = require('@cui-cli/log')
-// const init = require('@cui-cli/init')
-const exec = require('@cui-cli/exec')
+const log = require('@ccs-cui-cli/log')
+// const init = require('@ccs-cui-cli/init')
+const exec = require('@ccs-cui-cli/exec')
 
 const pkg = require('../package.json');
 const constant = require('./const');
@@ -107,7 +107,7 @@ async function checkGlobalUpdate() {
     const currentVersion = pkg.version;
     const npmName = pkg.name
     // 2、调用npm API，获取所有版本号
-    const { getNpmSemverVersion } = require('@cui-cli/get-npm-info')
+    const { getNpmSemverVersion } = require('@ccs-cui-cli/get-npm-info')
     const lastVersion = await getNpmSemverVersion(currentVersion, npmName)
     if (lastVersion && semver.gt(lastVersion, currentVersion)) {
         // log.warn('更新提示', colors.yellow(`
@@ -184,7 +184,7 @@ function checkRoot() {
 //     const lowestNodeVersion = constant.LOWEST_NODE_VERSION
 
 //     if (!semver.gte(currentVersion, lowestNodeVersion)) {
-//         throw new Error(colors.red(`cui-cli 需要安装 v${lowestNodeVersion}以上版本的 Node.js` ))
+//         throw new Error(colors.red(`ccs-cui-cli 需要安装 v${lowestNodeVersion}以上版本的 Node.js` ))
 //     }
 // }
 

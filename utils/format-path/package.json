@@ -1,5 +1,5 @@
 {
-  "name": "@cui-cli/format-path",
+  "name": "@ccs-cui-cli/format-path",
   "version": "1.0.0",
   "description": "format path",
   "author": "mayefeng",
@@ -13,6 +13,7 @@
     "lib"
   ],
   "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
     "access": "public"
   },
   "scripts": {

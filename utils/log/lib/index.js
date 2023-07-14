@@ -3,7 +3,7 @@
  * @Date: 2023-06-29 13:10:18
  * @LastEditors: mayefeng
  * @LastEditTime: 2023-07-14 14:24:12
- * @FilePath: /cui-cli/utils/log/lib/index.js
+ * @FilePath: /ccs-cui-cli/utils/log/lib/index.js
  * @Description: Description here
  */
 'use strict';

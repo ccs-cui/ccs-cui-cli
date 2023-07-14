@@ -1,5 +1,5 @@
 {
-  "name": "@cui-cli/git",
+  "name": "@ccs-cui-cli/git",
   "version": "1.0.0",
   "description": "gitFlow",
   "author": "mayefeng",
@@ -20,10 +20,10 @@
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
-    "@cui-cli/cloudbuild": "^1.0.0",
-    "@cui-cli/log": "^1.0.0",
-    "@cui-cli/request": "^1.0.0",
-    "@cui-cli/utils": "^1.0.0",
+    "@ccs-cui-cli/cloudbuild": "^1.0.0",
+    "@ccs-cui-cli/log": "^1.0.0",
+    "@ccs-cui-cli/request": "^1.0.0",
+    "@ccs-cui-cli/utils": "^1.0.0",
     "axios": "^0.22.0",
     "fs-extra": "^10.0.0",
     "inquirer": "^8.1.2",

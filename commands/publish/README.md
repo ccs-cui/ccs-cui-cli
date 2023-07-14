@@ -1,11 +1,11 @@
-# `@cui-cli/publish`
+# `@ccs-cui-cli/publish`
 
 > TODO: description
 
 ## Usage
 
 ```
-const publish = require('@cui-cli/publish');
+const publish = require('@ccs-cui-cli/publish');
 
 // TODO: DEMONSTRATE API
 ```

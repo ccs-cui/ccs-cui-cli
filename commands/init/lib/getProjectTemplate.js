@@ -10,7 +10,7 @@ module.exports = function() {
                 "type": "normal",
                 "system_event": "",
                 "bui_cli_templates_id": "1303194094809952256",
-                "version": "latest",
+                "version": "^0.0.5",
                 "created_by": "mayefeng",
                 "data_source": "crius",
                 "is_deleted": false,

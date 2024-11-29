@@ -1,6 +1,6 @@
 {
   "name": "@ccs-cui-cli/exec",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "ccs-cui-cli execute package",
   "author": "mayefeng",
   "license": "ISC",
@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "@ccs-cui-cli/log": "^1.0.0",
-    "@ccs-cui-cli/package": "^1.0.0",
+    "@ccs-cui-cli/package": "^1.0.2",
     "@ccs-cui-cli/utils": "^1.0.0"
   }
 }

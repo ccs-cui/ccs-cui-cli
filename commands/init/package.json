@@ -1,6 +1,6 @@
 {
   "name": "@ccs-cui-cli/init",
-  "version": "1.0.34",
+  "version": "1.0.38",
   "description": "ccs-cui-cli init",
   "author": "mayefeng",
   "license": "ISC",
@@ -19,7 +19,7 @@
   "dependencies": {
     "@ccs-cui-cli/command": "^1.0.0",
     "@ccs-cui-cli/log": "^1.0.0",
-    "@ccs-cui-cli/package": "^1.0.0",
+    "@ccs-cui-cli/package": "^1.0.2",
     "@ccs-cui-cli/request": "1.0.4",
     "@ccs-cui-cli/utils": "^1.0.0",
     "ejs": "^3.1.6",

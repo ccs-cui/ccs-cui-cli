@@ -1,13 +1,13 @@
 {
-  "name": "@ccs-cui-cli/core",
+  "name": "@ccs-cli/core",
   "version": "1.0.4",
-  "description": "ccs-cui-cli core",
+  "description": "ccs-cli core",
   "author": "mayefeng",
   "homepage": "",
   "license": "ISC",
   "main": "lib/core.js",
   "bin": {
-    "ccs-cui-cli": "bin/index.js"
+    "ccs-cli": "bin/index.js"
   },
   "directories": {
     "lib": "lib",
@@ -21,11 +21,11 @@
     "test": "echo \"Run testting from core\""
   },
   "dependencies": {
-    "@ccs-cui-cli/exec": "^1.0.2",
-    "@ccs-cui-cli/get-npm-info": "^1.0.3",
-    "@ccs-cui-cli/init": "^1.0.35",
-    "@ccs-cui-cli/log": "^1.0.0",
-    "@ccs-cui-cli/utils": "^1.0.0",
+    "@ccs-cli/exec": "^1.0.2",
+    "@ccs-cli/get-npm-info": "^1.0.3",
+    "@ccs-cli/init": "^1.0.35",
+    "@ccs-cli/log": "^1.0.0",
+    "@ccs-cli/utils": "^1.0.0",
     "colors": "^1.4.0",
     "commander": "^6.2.1",
     "dotenv": "^10.0.0",

@@ -2,6 +2,6 @@
 
 const package = require('..');
 
-describe('@ccs-cui-cli/package', () => {
+describe('@ccs-cli/package', () => {
     it('needs tests');
 });

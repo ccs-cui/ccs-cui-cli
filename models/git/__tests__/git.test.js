@@ -2,6 +2,6 @@
 
 const git = require('..');
 
-describe('@ccs-cui-cli/git', () => {
+describe('@ccs-cli/git', () => {
     it('needs tests');
 });

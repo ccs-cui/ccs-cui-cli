@@ -1,7 +1,7 @@
 {
-  "name": "@ccs-cui-cli/utils",
+  "name": "@ccs-cli/utils",
   "version": "1.0.0",
-  "description": "ccs-cui-cli utils",
+  "description": "ccs-cli utils",
   "author": "mayefeng",
   "homepage": "",
   "license": "ISC",

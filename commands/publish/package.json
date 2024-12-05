@@ -1,5 +1,5 @@
 {
-  "name": "@ccs-cui-cli/publish",
+  "name": "@ccs-cli/publish",
   "version": "1.0.0",
   "description": "publish command",
   "author": "mayefeng",
@@ -20,9 +20,9 @@
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
-    "@ccs-cui-cli/command": "^1.0.0",
-    "@ccs-cui-cli/git": "^1.0.0",
-    "@ccs-cui-cli/log": "^1.0.0",
+    "@ccs-cli/command": "^1.0.0",
+    "@ccs-cli/git": "^1.0.0",
+    "@ccs-cli/log": "^1.0.0",
     "fs-extra": "^10.0.0"
   }
 }

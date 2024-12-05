@@ -1,9 +1,9 @@
 {
-  "name": "@ccs-cui-cli/get-npm-info",
+  "name": "@ccs-cli/get-npm-info",
   "version": "1.0.3",
   "description": "get npm info",
   "author": "mayefeng",
-  "homepage": "https://github.com/mayefeng/ccs-cui-cli#readme",
+  "homepage": "https://github.com/mayefeng/ccs-cli#readme",
   "license": "ISC",
   "main": "lib/index.js",
   "directories": {

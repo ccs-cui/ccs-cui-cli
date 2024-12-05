@@ -2,6 +2,6 @@
 
 const exec = require('..');
 
-describe('@ccs-cui-cli/exec', () => {
+describe('@ccs-cli/exec', () => {
     it('needs tests');
 });

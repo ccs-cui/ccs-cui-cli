@@ -1,11 +1,11 @@
-# `@ccs-cui-cli/exec`
+# `@ccs-cli/exec`
 
 > TODO: description
 
 ## Usage
 
 ```
-const exec = require('@ccs-cui-cli/exec');
+const exec = require('@ccs-cli/exec');
 
 // TODO: DEMONSTRATE API
 ```

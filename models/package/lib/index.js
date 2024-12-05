@@ -4,9 +4,9 @@ const fse = require('fs-extra')
 const pkgDir = require('pkg-dir').sync
 const pathExists = require('path-exists').sync
 const npminstall = require('npminstall')
-const { isObject } = require('@ccs-cui-cli/utils')
-const formatPath = require('@ccs-cui-cli/format-path')
-const { getDefaultRegisry, getNpmLastestVersion } = require('@ccs-cui-cli/get-npm-info')
+const { isObject } = require('@ccs-cli/utils')
+const formatPath = require('@ccs-cli/format-path')
+const { getDefaultRegisry, getNpmLastestVersion } = require('@ccs-cli/get-npm-info')
 
 class Package{
     constructor(options) {

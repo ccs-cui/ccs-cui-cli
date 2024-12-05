@@ -1,7 +1,7 @@
 {
-  "name": "@ccs-cui-cli/exec",
+  "name": "@ccs-cli/exec",
   "version": "1.0.2",
-  "description": "ccs-cui-cli execute package",
+  "description": "ccs-cli execute package",
   "author": "mayefeng",
   "license": "ISC",
   "main": "lib/index.js",
@@ -21,8 +21,8 @@
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
-    "@ccs-cui-cli/log": "^1.0.0",
-    "@ccs-cui-cli/package": "^1.0.2",
-    "@ccs-cui-cli/utils": "^1.0.0"
+    "@ccs-cli/log": "^1.0.0",
+    "@ccs-cli/package": "^1.0.2",
+    "@ccs-cli/utils": "^1.0.0"
   }
 }

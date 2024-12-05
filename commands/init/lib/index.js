@@ -15,10 +15,10 @@ const glob = require('glob')
 const ejs = require('ejs')
 const semver = require('semver')
 const userHome = require('user-home')
-const Command = require('@ccs-cui-cli/command')
-const Package = require('@ccs-cui-cli/package')
-const log = require('@ccs-cui-cli/log')
-const { spinnerStart, execAsync } = require('@ccs-cui-cli/utils')
+const Command = require('@ccs-cli/command')
+const Package = require('@ccs-cli/package')
+const log = require('@ccs-cli/log')
+const { spinnerStart, execAsync } = require('@ccs-cli/utils')
 
 const getProjectTemplate = require('./getProjectTemplate')
 
@@ -190,8 +190,8 @@ class InitCommand extends Command {
     async downloadTemplate() {
         const { projectTemplate } = this.projectInfo
         this.templateInfo = this.template.find(item => item.npmName === projectTemplate)
-        const targetPath = path.resolve(userHome, '.ccs-cui-cli', 'template')
-        const storeDir = path.resolve(userHome, '.ccs-cui-cli', 'template', 'node_modules')
+        const targetPath = path.resolve(userHome, '.ccs-cli', 'template')
+        const storeDir = path.resolve(userHome, '.ccs-cli', 'template', 'node_modules')
         const { npmName, version } = this.templateInfo
         const templateNpm = new Package({
             targetPath,
@@ -199,12 +199,15 @@ class InitCommand extends Command {
             packageName: npmName,
             packageVersion: version
         })
+        console.log({ templateNpm })
+        this.templateNpm = templateNpm
         // console.log('exist', !await templateNpm.exists())
         if (!await templateNpm.exists()) {
             const spinner = spinnerStart('正在下载模板...')
             try {
                 await templateNpm.install()
             } catch (e) {
+                console.log('downloadTemplate', { e })
                 throw e
             } finally {
                 spinner.stop(true)

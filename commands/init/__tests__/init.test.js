@@ -2,6 +2,6 @@
 
 const init = require('..');
 
-describe('@ccs-cui-cli/init', () => {
+describe('@ccs-cli/init', () => {
     it('needs tests');
 });

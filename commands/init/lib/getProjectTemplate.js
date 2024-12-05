@@ -1,4 +1,4 @@
-const request = require('@ccs-cui-cli/request')
+const request = require('@ccs-cli/request')
 
 module.exports = function() {
     return new Promise(resolve => {
@@ -10,12 +10,12 @@ module.exports = function() {
                 "type": "normal",
                 "system_event": "",
                 "bui_cli_templates_id": "1303194094809952256",
-                "version": "^0.0.5",
+                "version": "^0.0.7",
                 "created_by": "mayefeng",
                 "data_source": "crius",
                 "is_deleted": false,
                 "updated_at": "2024-11-26 09:55:39",
-                "npmName": "@ccs-cui-cli/cui-pro-template",
+                "npmName": "@ccs-cli/cui-pro-template",
                 "system_version": "1",
                 "name": "Cui Pro 企业级中后台模板（完整）",
                 "updated_by": "mayefeng",

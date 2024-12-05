@@ -1,7 +1,7 @@
 {
-  "name": "@ccs-cui-cli/command",
+  "name": "@ccs-cli/command",
   "version": "1.0.0",
-  "description": "ccs-cui-cli command",
+  "description": "ccs-cli command",
   "author": "mayefeng",
   "license": "ISC",
   "main": "lib/index.js",
@@ -21,7 +21,7 @@
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
-    "@ccs-cui-cli/log": "^1.0.0",
+    "@ccs-cli/log": "^1.0.0",
     "colors": "^1.4.0",
     "semver": "^7.3.5"
   }

@@ -1,5 +1,5 @@
 {
-  "name": "@ccs-cui-cli/cloudbuild",
+  "name": "@ccs-cli/cloudbuild",
   "version": "1.0.0",
   "description": "cloudbuild",
   "author": "mayefeng",
@@ -17,8 +17,8 @@
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
-    "@ccs-cui-cli/log": "^1.0.0",
-    "@ccs-cui-cli/request": "^1.0.0",
+    "@ccs-cli/log": "^1.0.0",
+    "@ccs-cli/request": "^1.0.0",
     "inquirer": "^8.1.2",
     "lodash": "^4.17.21",
     "socket.io-client": "^2.0.0"

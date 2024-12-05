@@ -3,15 +3,15 @@
 module.exports = exec;
 
 const path = require('path')
-const Package = require('@ccs-cui-cli/package')
-const log = require('@ccs-cui-cli/log');
-const { exec: spawn } = require('@ccs-cui-cli/utils');
+const Package = require('@ccs-cli/package')
+const log = require('@ccs-cli/log');
+const { exec: spawn } = require('@ccs-cli/utils');
 const { chdir } = require('process');
 
 const SETTINGS = {
-    // init: '@ccs-cui-cli/init'
-    init: '@ccs-cui-cli/init',
-    publish: '@ccs-cui-cli/publish',
+    // init: '@ccs-cli/init'
+    init: '@ccs-cli/init',
+    publish: '@ccs-cli/publish',
 }
 
 // const FILE_SETTINGS = {

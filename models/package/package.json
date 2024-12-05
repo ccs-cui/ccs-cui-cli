@@ -1,7 +1,7 @@
 {
-  "name": "@ccs-cui-cli/package",
+  "name": "@ccs-cli/package",
   "version": "1.0.2",
-  "description": "ccs-cui-cli npm modules",
+  "description": "ccs-cli npm modules",
   "author": "mayefeng",
   "license": "ISC",
   "main": "lib/index.js",
@@ -20,9 +20,9 @@
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
-    "@ccs-cui-cli/format-path": "^1.0.0",
-    "@ccs-cui-cli/get-npm-info": "^1.0.3",
-    "@ccs-cui-cli/utils": "^1.0.0",
+    "@ccs-cli/format-path": "^1.0.0",
+    "@ccs-cli/get-npm-info": "^1.0.3",
+    "@ccs-cli/utils": "^1.0.0",
     "fs-extra": "^10.0.0",
     "npminstall": "^4.11.0",
     "path-exists": "^4.0.0",

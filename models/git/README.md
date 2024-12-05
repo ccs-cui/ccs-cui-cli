@@ -1,11 +1,11 @@
-# `@ccs-cui-cli/git`
+# `@ccs-cli/git`
 
 > TODO: description
 
 ## Usage
 
 ```
-const git = require('@ccs-cui-cli/git');
+const git = require('@ccs-cli/git');
 
 // TODO: DEMONSTRATE API
 ```
